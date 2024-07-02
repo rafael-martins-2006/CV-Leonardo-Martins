@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="/js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Leonardo Martins - CV</title>
+</head>
+
+<body class="bg-[#343C3E] overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="font-bold py-4 navbar-shadow bg-[#343C3E] fixed top-0 left-0 w-full z-10 transition-transform">
+        <div class="flex items-center justify-between max-w-screen-lg mx-auto px-10">
+            <button id="open-sidebar" class="lg:hidden text-white text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="hidden lg:flex w-full gap-6">
+                <li class="link text-gray-300 hover:text-white"><a href="#sobre-mim">Sobre mim</a></li>
+                <li class="link text-gray-300 hover:text-white"><a href="#hobbies">Hobbies</a></li>
+                <li class="link"><a class="text-gray-300 hover:text-white" href="#referencias">Referências</a></li>
+                <li class="relative">
+                    <button id="dropdown-button" class="text-gray-300 hover:text-white focus:outline-none">Área Profissional <i class="fa-solid fa-caret-down" style="color: #ffffff;"></i></button>
+                    <ul id="dropdown-menu" class="absolute hidden bg-[#282C2E] text-white mt-2 py-4 w-48 rounded-lg space-y-3">
+                        <li class="link pl-4"><a href="#percurso-academico">Percurso Académico</a></li>
+                        <li class="link pl-4"><a href="#idiomas">Idiomas</a></li>
+                        <li class="link pl-4"><a href="#competencias">Competências</a></li>
+                        <li class="link pl-4"><a href="#os-meus-trabalhos">Os Meus Trabalhos</a></li>
+                    </ul>
+                </li>
+                <li class="link text-gray-300 hover:text-white"><a href="#contactos">Contactos</a></li>
+            </ul>
+            <img src="/img/logo_dark.png" class="w-20" alt="LM logo">
+        </div>
+    </nav>
+
+    <!-- Side Navbar -->
+    <div id="sidebar" class="sidebar fixed inset-y-0 left-0 w-64 bg-[#282C2E] transform -translate-x-full lg:hidden z-50 max-w-screen-lg mx-auto px-10">
+        <button id="close-sidebar" class="text-white text-2xl m-4">
+            <i class="fas fa-times"></i>
+        </button>
+        <h3 class="font-bold text-lg px-4 pt-2 mb-4 text-white">Explorar</h3>
+        <ul class="mt-8 space-y-4">
+            <li class="link"><a href="#sobre-mim" class="text-gray-300 hover:text-white ml-4">Sobre mim</a></li>
+            <li class="link"><a href="#hobbies" class="text-gray-300 hover:text-white ml-4">Hobbies</a></li>
+            <li class="link"><a href="#referencias" class="text-gray-300 hover:text-white ml-4">Referências</a></li>
+            <li class="link"><a href="#percurso-academico" class="text-gray-300 hover:text-white ml-4">Percurso académico</a></li>
+            <li class="link"><a href="#idiomas" class="text-gray-300 hover:text-white ml-4">Idiomas</a></li>
+            <li class="link"><a href="#competencias" class="text-gray-300 hover:text-white ml-4">Competências</a></li>
+            <li class="link"><a href="#os-meus-trabalhos" class="text-gray-300 hover:text-white ml-4">Os Meus Trabalhos</a></li>
+            <li class="link"><a href="#contactos" class="text-gray-300 hover:text-white ml-4">Contactos</a></li>
+        </ul>
+    </div>
+
+
+    <main class="transition-transform duration-300">
+
+        <!-- Imagem -->
+        <section class="mb-20 max-w-screen-lg mx-auto px-10 mt-44">
+            <div class="relative w-80 h-80 mb-6 mx-auto profile-container">
+                <img src="/img/logo_dark.png" class="w-full h-full rounded-full block p-4" alt="Foto Capa">
+                <div class="spinner absolute top-0 left-0 w-full h-full rounded-full"></div>
+            </div>
+            <div class="text-center space-y-2">
+                <h1 class="text-white font-bold text-4xl">Leonardo Martins</h1>
+                <span class="text-[#FFD700] font-thin text-xl uppercase">Web Developer</span>
+            </div>
+        </section>
+
+        <!-- Sobre mim -->
+        <section id="sobre-mim" class="mb-20 max-w-screen-lg mx-auto px-10">
+            <h1 id="sobre-mim-title" class="text-white mx-auto font-bold text-3xl text-center border-b-2 border-[#FFD700] pb-4 px-8 w-fit block">Sobre mim</h1>
+            <div class="text-white bg-[#282C2E] shadow-xl rounded-xl p-4 mt-10 text-justify">
+                <p>Olá, sou o Leonardo Martins, nasci no dia 25 de maio de 2006, na cidade do Porto. Desde pequeno, gosto de jogar videojogos e de passar tempo com a minha família e amigos.</p>
+                <p>O meu objetivo é entrar na universidade e formar-me como Engenheiro de Multimédia, desenvolvendo continuamente as minhas competências técnicas na área. Após a conclusão da licenciatura, planeio realizar um mestrado em Multimédia ou apenas na área da programação.</p>
+            </div>
+        </section>
+
+        <!-- Hobbies -->
+        <section id="hobbies" class="mb-20 max-w-screen-lg mx-auto px-10">
+            <h1 id="hobbies-title" class="text-white mx-auto font-bold text-3xl text-center border-b-2 border-[#FFD700] pb-4 px-8 w-fit block">Hobbies</h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+
+                <div class="bg-[#282C2E] hover:transform hover:scale-[1.05] shadow-xl rounded-xl py-6 text-center cursor-pointer" data-modal="modal-videojogos">
+                    <img src="/img/comando.png" class="w-24 h-24 mx-auto mb-8" alt="Videojogos">
+                    <h3 class="text-white text-xl font-bold">Videojogos</h3>
+                </div>
+
+                <div class="bg-[#282C2E] hover:transform hover:scale-[1.05] shadow-xl rounded-xl py-6 text-center cursor-pointer" data-modal="modal-familia">
+                    <img src="/img/familia.png" class="w-24 h-24 mx-auto mb-8" alt="Família e Amigos">
+                    <h3 class="text-white text-xl font-bold">Família e Amigos</h3>
+                </div>
+
+                <div class="bg-[#282C2E] hover:transform hover:scale-[1.05] shadow-xl rounded-xl py-6 text-center cursor-pointer" data-modal="modal-musica">
+                    <img src="/img/musica.png" class="w-24 h-24 mx-auto mb-8" alt="Música">
+                    <h3 class="text-white text-xl font-bold">Música</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Referências -->
+        <section id="referencias" class="mb-20 max-w-screen-lg mx-auto px-10">
+            <h1 id="referencias-title" class="text-white mx-auto font-bold text-3xl text-center border-b-2 border-[#FFD700] pb-4 px-8 w-fit block">Referências</h1>
+            <div class="bg-[#282C2E] shadow-xl rounded-xl py-12 px-4 mt-10 relative overflow-hidden">
+                <div id="content-container" class="content-container max-h-[575px] md:max-h-[775px] lg:max-h-[950px] overflow-hidden relative">
+                    <div class="flex w-full text-white gap-3">
+                        <img src="/img/tupac.png" alt="Tupac Shakur" class="w-1/3">
+                        <div class="font-light">
+                            <p class="text-base lg:text-xl italic leading-5 font-serif">"During your life, never stop dreaming. No one can take away your dreams."</p>
+                            <h1 class="text-sm lg:text-base mt-1">Tupac Shakur</h1>
+                        </div>
+                    </div>
+                    <hr class="w-full border-white mb-24">
+
+                    <div class="flex justify-end w-full text-white gap-3">
+                        <div class="font-light flex flex-col items-end text-right">
+                            <p class="text-base text-end lg:text-xl italic leading-5 font-serif">"Your love makes me strong, your hate makes me unstoppable."</p>
+                            <h1 class="text-sm lg:text-base mt-1">Cristiano Ronaldo</h1>
+                        </div>
+                        <img src="/img/cr7.png" alt="Cristiano Ronaldo" class="w-1/3">
+                    </div>
+                    <hr class="w-full border-white mb-24">
+
+                    <div class="flex w-full text-white gap-3">
+                        <img src="/img/mz.png" alt="Mark Zuckerberg" class="w-1/3">
+                        <div class="font-light">
+                            <p class="text-base lg:text-xl italic leading-5 font-serif">"No one does when they begin. Ideas don't come out fully formed, they only become clear as you work on them. You just have to get started."</p>
+                            <h1 class="text-sm lg:text-base mt-1">Mark Zuckerberg</h1>
+                        </div>
+                    </div>
+                    <hr class="w-full border-white mb-24">
+                    <div id="extra-quotes" class="hidden">
+                        <div class="flex justify-end w-full text-white gap-3">
+                            <div class="font-light flex flex-col items-end text-right">
+                                <p class="text-base text-end lg:text-xl italic leading-5 font-serif">"Most people who are criticizing and judging haven’t even tried what you failed at."</p>
+                                <h1 class="text-sm lg:text-base mt-1">David Goggins</h1>
+                            </div>
+                            <img src="/img/dg.png" alt="David Goggins" class="w-1/3">
+                        </div>
+                        <hr class="w-full border-white mb-24">
+
+                        <div class="flex w-full text-white gap-3">
+                            <img src="/img/mamba.png" alt="Kobe Bryant" class="w-1/3">
+                            <div class="font-light">
+                                <p class="text-base lg:text-xl italic leading-5 font-serif">"The moment you give up, is the moment you let someone else win."</p>
+                                <h1 class="text-sm lg:text-base mt-1">Kobe Bryant</h1>
+                            </div>
+                        </div>
+                        <hr class="w-full border-white">
+                    </div>
+                </div>
+
+                <div class="gradient-overlay absolute bottom-24 left-0 w-full h-32 pointer-events-none"></div>
+
+                <div class="text-center mt-8">
+                    <button id="show-more-btn" class="bg-[#FFD700] hover:transform hover:scale-[1.05] text-white font-bold py-2 px-4 rounded-full">Ver mais</button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Percurso Académico -->
+        <section id="percurso-academico" class="mb-20 max-w-screen-lg mx-auto px-10">
+            <h1 id="percurso-academico-title" class="text-white mx-auto font-bold text-3xl text-center border-b-2 border-[#FFD700] pb-4 px-8 w-fit block">Percurso Académico</h1>
+            <div class="timeline bg-[#282C2E] shadow-xl rounded-xl mt-10 text-white py-[30px] px-[20px]">
+                <ul class="border-l-2 border-white py-[10px] px-[5px] list-none">
+                    <li class="py-4 px-4 relative">
+                        <span class="inline-block bg-[#FFD700] text-white font-bold rounded-full px-4 py-1 text-sm">2024</span>
+                        <div class="content">
+                            <h3 class="font-bold text-lg mt-2">High Play Institute</h3>
+                            <p class="text-sm pt-2 pb-4">Na High Play Institute, onde fui estagiário, desenvolvi significativamente as minhas competências na área da programação. Foi a primeira vez que tive contacto com o mundo do trabalho, proporcionando-me uma experiência valiosa e preparando-me para futuros desafios profissionais.</p>
+                        </div>
+                    </li>
+                    <li class="py-4 px-4 relative">
+                        <span class="inline-block bg-[#FFD700] text-white font-bold rounded-full px-4 py-1 text-sm">2021-2024</span>
+                        <div class="content">
+                            <h3 class="font-bold text-lg mt-2">Instituto Profissional de Tecnologias Avançadas</h3>
+                            <p class="text-sm pt-2 pb-4">No Instituto Profissional de Tecnologias Avançadas (IPTA), concluí o curso de Técnico de Multimédia Nível 4, onde aprendi um pouco de tudo. Durante este curso, adquiri conhecimentos em fotografia, design, programação, vídeo, Photoshop, entre outros. Esta formação diversificada preparou-me para enfrentar desafios em várias áreas do multimédia.</p>
+                        </div>
+                    </li>
+                    <li class="py-4 px-4 relative">
+                        <span class="inline-block bg-[#FFD700] text-white font-bold rounded-full px-4 py-1 text-sm">2016 - 2021</span>
+                        <div class="content">
+                            <h3 class="font-bold text-lg mt-2">Escola Secundária Carolina Michaëlis</h3>
+                            <p class="text-sm pt-2 pb-4">Na Escola Secundária Carolina Michaëlis, estudei do quinto ao nono ano. Durante este período, tive uma educação geral com disciplinas normais, sem um foco específico em tecnologia. A escola proporcionou-me uma base sólida em várias áreas do conhecimento, preparando-me para a etapa seguinte da minha formação académica.</p>
+                        </div>
+                    </li>
+                    <li class="py-4 px-4 relative">
+                        <span class="inline-block bg-[#FFD700] text-white font-bold rounded-full px-4 py-1 text-sm">2012 - 2016</span>
+                        <div class="content">
+                            <h3 class="font-bold text-lg mt-2">Escola Básica 1º CEB / JI de Castelos</h3>
+                            <p class="text-sm pt-2 pb-4">Na Escola Básica 1º CEB / JI de Castelos, foi onde aprendi a ler e a escrever, e onde tive o meu primeiro contacto com a escola, uma vez que antes frequentava a creche. Esta escola básica foi fundamental no meu desenvolvimento inicial e nas bases da minha educação.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Idiomas -->
+        <section id="idiomas" class="mb-20 max-w-screen-lg mx-auto px-10">
+            <div class="w-full">
+                <h1 id="idiomas-title" class="text-white mx-auto font-bold text-3xl text-center border-b-2 border-[#FFD700] pb-4 px-8 w-fit block">Idiomas</h1>
+                <div class="text-white mt-10 space-y-4">
+                    <div class="flex items-center w-full bg-[#282C2E] shadow-xl rounded-xl p-4 star-rating" data-rating="4">
+                        <img src="/img/portugues.png" class="w-10 h-10" alt="Português">
+                        <div class="ml-4 flex items-center justify-between w-full">
+                            <div>
+                                <h2 class="text-lg font-bold">Português</h2>
+                                <span class="">(C1)</span>
+                            </div>
+                            <div class="flex space-x-1 text-xl stars">
+                                <span class="star text-gray-300">&#9733;</span>
+                                <span class="star text-gray-300">&#9733;</span>
+                                <span class="star text-gray-300">&#9733;</span>
+                                <span class="star text-gray-300">&#9733;</span>
+                                <span class="star text-gray-300">&#9733;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center w-full bg-[#282C2E] shadow-xl rounded-xl p-4 star-rating" data-rating="2">
+                        <img src="/img/ingles.png" class="w-10 h-10" alt="Inglês">
+                        <div class="ml-4 flex items-center justify-between w-full">
+                            <div>
+                                <h2 class="text-lg font-bold">Inglês</h2>
+                                <span class="">(A2)</span>
+                            </div>
+                            <div class="flex space-x-1 text-xl stars">
+                                <span class="star text-gray-300">&#9733;</span>
+                                <span class="star text-gray-300">&#9733;</span>
+                                <span class="star text-gray-300">&#9733;</span>
+                                <span class="star text-gray-300">&#9733;</span>
+                                <span class="star text-gray-300">&#9733;</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Competências -->
+        <section id="competencias" class="mb-20 max-w-screen-lg mx-auto px-10">
+            <h1 id="competencias-title" class="text-white m-auto font-bold text-3xl border-b-2 border-[#FFD700] pb-4 px-8 w-fit block">Competências</h1>
+            <div class="relative flex flex-col text-white mt-10 bg-[#282C2E] shadow-xl rounded-xl">
+                <div class="grid place-items-center">
+                    <div id="chart-container" class="relative w-[350px] h-[350px] mt-5 m-auto">
+                        <div id="pie-chart" class="absolute top-0 left-0 w-full h-full"></div>
+                        <img src="img/illustrator.png" alt="Adobe Illustrator" data-skill="illustrator" class="absolute w-12 h-12 bottom-[67%] right-[27%] pointer-events-auto">
+                        <img src="img/xd.png" alt="Adobe XD" data-skill="xd" class="absolute w-12 h-12 bottom-[30%] right-[27%] pointer-events-auto">
+                        <img src="img/3ds_max.png" alt="Autodesk 3ds Max" data-skill="max" class="absolute w-12 h-12 bottom-[16%] left-[33%] pointer-events-auto">
+                        <img src="img/vscode.png" alt="Visual Studio Code" data-skill="vscode" class="absolute w-12 h-12 top-[35%] left-[20%] pointer-events-auto">
+                    </div>
+                </div>
+                <div id="skill-description" class="p-4 hidden">
+                    <h2 class="text-2xl font-bold mb-2 text-center"></h2>
+                    <p class="mt-10"></p>
+                </div>
+                <div id="skill-media" class="mt-8 hidden">
+                    <img src="" alt="" class="w-full h-auto rounded-b-xl hidden">
+                    <video src="" controls class="w-full h-auto rounded-b-xl hidden"></video>
+                </div>
+            </div>
+        </section>
+
+        <!-- Os meus Trabalhos -->
+        <section id="os-meus-trabalhos" class="mb-20 max-w-screen-lg mx-auto px-10">
+            <h1 id="os-meus-trabalhos-title" class="text-white m-auto font-bold text-3xl border-b-2 border-[#FFD700] pb-4 px-8 w-fit block">Os meus Trabalhos</h1>
+            <div class="relative mt-10">
+                <div class="overflow-hidden rounded-xl">
+                    <div class="carousel-inner flex flex transition-transform duration-500">
+                        <div class="carousel-item w-full">
+                            <img src="/img/1.png" class="w-full">
+                        </div>
+                        <div class="carousel-item w-full">
+                            <img src="/img/1.png" class="w-full">
+                        </div>
+                        <div class="carousel-item w-full">
+                            <img src="/img/1.png" class="w-full">
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute inset-y-0 left-0 flex items-center">
+                    <button class="carousel-button left text-white font-bold py-2 px-4">&#10094;</button>
+                </div>
+                <div class="absolute inset-y-0 right-0 flex items-center">
+                    <button class="carousel-button right text-white font-bold py-2 px-4">&#10095;</button>
+                </div>
+                <div class="flex items-center mt-8 space-x-2 px-4">
+                    <div class="indicator w-3 h-3 bg-gray-400 rounded-full cursor-pointer"></div>
+                    <div class="indicator w-3 h-3 bg-gray-400 rounded-full cursor-pointer"></div>
+                    <div class="indicator w-3 h-3 bg-gray-400 rounded-full cursor-pointer"></div>
+                    <div class="flex justify-end w-full">
+                        <button id="pause-btn" class="pause-btn text-white rounded-full" title="Parar a animação" onmouseover="changeButtonText(this)" onmouseout="resetButtonText(this)">
+                            <i class="fa-solid fa-pause fa-xl" style="color: #ffffff;"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="detalhes" class="bg-[#282C2E] shadow-xl rounded-xl p-4 text-white text-left mt-12 fade-in">
+                <h2 id="titulo" class="text-2xl font-bold"></h2>
+                <p id="data" class="text-gray-300 italic mb-4"></p>
+                <p id="descricao" class="h-[200px] overflow-y-auto break-words max-w-[1000px]"></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contactos" class="bg-[#282C2E] text-white pt-12">
+        <div class="max-w-screen-lg mx-auto px-10">
+            <div class="flex flex-col md:flex-row w-full items-center md:justify-between">
+                <div class="flex justify-start items-center mb-8 md:mb-0">
+                    <img src="/img/logo_dark.png" alt="Logo" class="h-60 mr-4">
+                </div>
+                <div class="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 lg:space-x-32 md:space-x-16 w-full md:w-auto">
+                    <div class="mb-8 md:mb-0">
+                        <h3 class="font-bold text-lg mb-4">Explorar</h3>
+                        <ul class="space-y-2">
+                            <li class="link"><a href="#sobre-mim" class="text-gray-300 hover:text-white">Sobre mim</a></li>
+                            <li class="link"><a href="#hobbies" class="text-gray-300 hover:text-white">Hobbies</a></li>
+                            <li class="link"><a href="#referencias" class="text-gray-300 hover:text-white">Referências</a></li>
+                            <li class="link"><a href="#percurso-academico" class="text-gray-300 hover:text-white">Percurso académico</a></li>
+                            <li class="link"><a href="#idiomas" class="text-gray-300 hover:text-white">Idiomas</a></li>
+                            <li class="link"><a href="#competencias" class="text-gray-300 hover:text-white">Competências</a></li>
+                            <li class="link"><a href="#os-meus-trabalhos" class="text-gray-300 hover:text-white">Os Meus Trabalhos</a></li>
+                            <li class="link"><a href="#contactos" class="text-gray-300 hover:text-white">Contactos</a></li>
+                        </ul>
+                    </div>
+                    <div class="mb-8 md:mb-0 md:ml-auto">
+                        <h1 id="contactos-title" class="font-bold text-lg mb-4">Contactos</h1>
+                        <ul>
+                            <li class="flex items-center link">
+                                <i class="fab fa-whatsapp mr-2"></i>
+                                <a href="tel:+351919311424" class="text-gray-300 hover:text-white">+351 919 311 424</a>
+                            </li>
+                            <li class="flex items-center link mt-2">
+                                <i class="fa-solid fa-envelope mr-2"></i>
+                                <a href="mailto:rafam2556@gmail.com" class="text-gray-300 hover:text-white">rafam2556@gmail.com</a>
+                            </li>
+                            <li class="flex items-center link mt-2">
+                                <i class="fab fa-behance mr-2"></i>
+                                <a href="https://www.behance.net/leonardomartins2006" class="text-gray-300 hover:text-white">Behance</a>
+                            </li>
+                            <li class="flex items-center link mt-2">
+                                <i class="fab fa-linkedin-in mr-2"></i>
+                                <a href="https://www.linkedin.com/in/leonardomartins2006/" class="text-gray-300 hover:text-white">LinkedIn</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-12 py-6">
+            <p class="">2024 projeto by <span class="text-lg font-bold">Leonardo Martins</span></p>
+        </div>
+    </footer>
+
+
+
+    <!-- Modais -->
+    <!-- Modal Videojogos -->
+    <div id="modal-videojogos" class="fixed inset-0 flex items-center justify-center z-50 hidden bg-black bg-opacity-50 modal text-white">
+        <div class="bg-[#282C2E] rounded-lg shadow-xl max-w-md w-full pb-6 relative">
+            <button class="absolute top-2 right-3 text-2xl font-bold text-white close-modal shadow-xl">&times;</button>
+            <img src="/img/jogos_capa.png" class="w-full mx-auto mb-4 rounded-t-lg" alt="Videojogos">
+            <h2 class="mx-auto text-2xl font-bold mb-8 border-b-2 border-[#FFD700] pb-2 px-8 w-fit block">Videojogos</h2>
+            <div class="text-justify text-sm font-light px-6">
+                <p>Quando era mais novo, comecei a minha jornada nos videojogos com a PlayStation 1 aos 2 anos de idade. Desde então, passei pela PlayStation 2, PlayStation 3 e atualmente estou na PlayStation 4. O meu jogo favorito no momento é Rocket League, mas o meu jogo preferido de todos os tempos é Uncharted, que considero uma obra-prima.Um dos jogos que mais joguei foi Counter-Strike, com aproximadamente 2,5 mil horas de jogo. Tenho um grande desejo de adquirir um PC Gamer, tanto para jogos como para a faculdade, já que adoro jogar CS, mas nunca consegui jogar adequadamente devido aos baixos FPS no meu sistema atual.</p>
+                <br>
+                <p>Entre os jogos que marcaram a minha trajetória estão Call of Duty: Modern Warfare 3, Days Gone, Far Cry 4, Minecraft, FIFA 23, Resident Evil 7: Biohazard, NBA 2K24, Grand Theft Auto V, Need for Speed: Payback, Counter-Strike 2, God of War: Remastered e Tom Clancy's Rainbow Six Siege. Jogos sempre fizeram parte da minha vida e continuam a ser uma grande paixão, proporcionando-me horas de diversão e experiências inesquecíveis.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Família e Amigos -->
+    <div id="modal-familia" class="fixed inset-0 flex items-center justify-center z-50 hidden bg-black bg-opacity-50 modal text-white">
+        <div class="bg-[#282C2E] rounded-lg shadow-xl max-w-md w-full pb-6 relative">
+            <button class="absolute top-2 right-3 text-2xl font-bold close-modal shadow-xl">&times;</button>
+            <img src="/img/familia_capa.png" class="w-full mx-auto mb-4 rounded-t-lg" alt="Família e Amigos">
+            <h2 class="mx-auto text-2xl font-bold mb-8 border-b-2 border-[#FFD700] pb-2 px-8 w-fit block">Família e Amigos</h2>
+            <div class="text-justify text-sm font-light px-6">
+                <p>A nossa família é quem está lá sempre para nós, sendo a peça mais importante para a vida pessoal e profissional de uma pessoa. Com um bom ambiente familiar, as coisas fazem-se com mais facilidade, e é a eles que devemos tudo da nossa vida.</p>
+                <br>
+                <p>Quanto à nossa segunda família, os nossos amigos, estes já devem ser escolhidos com sabedoria para estarem sempre ao nosso lado na vitória e na derrota, sendo outro dos pilares da nossa vida.</p>
+                <br>
+                <p>A minha família e os meus amigos mais próximos são sem duvida as coisas mais importantes da minha vida, que nem o dinheiro consegue comprar.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Música -->
+    <div id="modal-musica" class="fixed inset-0 flex items-center justify-center z-50 hidden bg-black bg-opacity-50 modal text-white">
+        <div class="bg-[#282C2E] rounded-lg shadow-xl max-w-md w-full pb-6 relative">
+            <button class="absolute top-2 right-3 text-2xl font-bold close-modal shadow-xl">&times;</button>
+            <img src="/img/musica_capa.png" class="w-full mx-auto mb-4 rounded-t-lg" alt="Música">
+            <h2 class="mx-auto text-2xl font-bold mb-8 border-b-2 border-[#FFD700] pb-2 px-8 w-fit block">Música</h2>
+            <div class="text-justify text-sm font-light px-6">
+                <p>Quando era mais jovem, não tinha uma ligação forte com a música. Contudo, hoje em dia, não passo um dia sem ouvir música. Gosto de vários estilos musicais, como reggae, rock e reggaeton. Porém, o meu estilo de música favorito é o hip-hop, devido à mensagem transmitida nas canções.</p>
+                <br>
+                <p>Como disse Tupac Shakur, "I'm not saying I'm gonna change the world, but I guarantee that I will spark the brain that will change the world."</p>
+                <br>
+                <p>Os meus dois artistas favoritos são Tupac Shakur e The Notorious B.I.G. A minha música favorita é "It Was a Good Day" de Ice Cube, pois, apesar de fugir ao estilo típico dele, considero-a uma das melhores músicas de sempre.</p>
+                <br>
+                <p>Além destes, também aprecio outros artistas como 50 Cent, Nas, Snoop Dogg, Kendrick Lamar, Dr. Dre, Eazy-E, Wu-Tang Clan, Mobb Deep, Usher, J. Cole, Kanye West, Eminem e 21 Savage. O meu gosto musical centra-se, sobretudo, no hip-hop dos anos 90 e início dos anos 2000.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
