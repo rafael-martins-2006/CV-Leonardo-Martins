@@ -224,7 +224,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (targetSection) {
         window.scrollTo({
-          top: targetSection.offsetTop - 50,
+          top: targetSection.offsetTop - 100,
           behavior: "smooth",
         });
       }
